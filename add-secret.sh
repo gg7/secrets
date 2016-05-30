@@ -24,14 +24,13 @@ else
 	sample_user="george"
 fi
 
-sample_password=$(apg -a0 -m24 -x32 -n1)
 echo -n "Writing template to \"$file\"..."
 cat <<-EOF > "$file"
 	ACL: $me $sample_user
 	--------------------------------------------------------------------------------
 	$name: {{{
 	  user: CHANGE_ME
-	  pass: CHANGE_ME # fresh recommendation: $sample_password
+	  pass: CHANGE_ME
 	}}}
 
 	vim: set et sw=2 :
