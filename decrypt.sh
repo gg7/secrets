@@ -17,8 +17,8 @@ if [[ ! -f $file ]]; then
 		file="$file.txt"
 	elif [[ -f "encrypted/$file" ]]; then
 		file="enrypted/$file"
-	elif [[ -f "encrypted/$file.txt" ]]; then
-		file="encrypted/$file.txt"
+	elif [[ -f "encrypted/$file.gpg" ]]; then
+		file="encrypted/$file.gpg"
 	else
 		echo "No such file: $file" >&2
 		exit 1
