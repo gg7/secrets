@@ -2,7 +2,7 @@
 
 Password storage and access control through GPG.
 
-# Setup
+## Setup
 
 First you should set up GPG. See http://zacharyvoase.com/2009/08/20/openpgp/ .
 
@@ -18,13 +18,13 @@ Finally, do this:
 echo '<YOUR_KEY_EMAIL>' > whoami
 ```
 
-# Creating your first secret
+## Creating your first secret
 
 ```bash
 ./add-secret.sh
 ```
 
-# Viewing secrets you have access to
+## Viewing secrets you have access to
 
 See "vim integration". Otherwise:
 
@@ -33,7 +33,7 @@ See "vim integration". Otherwise:
 $EDITOR decrypted/example.txt
 ```
 
-# Updating secrets (data and access to them)
+## Updating secrets (data and access to them)
 
 If you use the vim integration don't forget to use `:GPGEditRecipients`. Otherwise:
 
@@ -42,11 +42,11 @@ $EDITOR decrypted/example.txt
 ./encrypt.sh decrypted/example.txt
 ```
 
-# vim integration
+## vim integration
 
 Install https://github.com/jamessan/vim-gnupg . This allows you to directly open
-and update `.pgp` files. It screws up editing `.asc` files though...
+and update `.pgp` files.
 
-# High-availability
+## High-availability
 
 `git-push` to several remotes.
