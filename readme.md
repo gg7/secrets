@@ -2,6 +2,12 @@
 
 Password storage and access control through GPG.
 
+Why not use [Vault](https://www.vaultproject.io/)?
+
+* This is simpler (~128 lines of Bash)
+* Highly available with trivial deployment (`git push` to several repos)
+* Fully decentralised (keeps working even without Internet access; `root` can't sniff your passwords)
+
 ## Setup
 
 First you should set up GPG. See http://zacharyvoase.com/2009/08/20/openpgp/ .
@@ -46,7 +52,3 @@ $EDITOR decrypted/example.txt
 
 Install https://github.com/jamessan/vim-gnupg . This allows you to directly open
 and update `.pgp` files.
-
-## High-availability
-
-`git-push` to several remotes.
